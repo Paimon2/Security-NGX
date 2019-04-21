@@ -1,0 +1,112 @@
+<html>
+<link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <head>
+    <title>Security System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <div class="container">
+
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Security System</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+              <li><a href="/cameras"><i class="fa fa-camera"></i> Cameras</a></li>
+              <li class="active"><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+              <li><a href="/help"><i class="fa fa-info-circle"></i> Help</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            <li  class="nav-item">
+             <a class="nav-link" href="/event_log"><i class="fa fa-bell"></i> <p style="color:red">{{notif_count}}</p></a>
+             </li>
+              <li  class="nav-item">
+             <a class="nav-link" href="/file_browser"><i class="fa fa-folder-open"></i> Access files</a>
+             <li  class="nav-item">
+              <p class="navbar-btn">
+                    <a href="/signout" class="btn btn-danger"><i class="fa fa-sign-out"></i> Logout</a>
+                </p>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+      <!-- Main component for a primary marketing message or call to action -->
+    
+<span class="pull-right">
+    <div class="container">
+      <!-- Example row of columns -->
+
+
+<div class="list-group" id="myList" role="tablist">
+   <a class="list-group-item list-group-item-action" data-toggle="list" href="settings_general" role="tab">General</a>
+    <a class="list-group-item list-group-item-action" data-toggle="list" href="settings_cameras" role="tab">Cameras</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="settings_motion" role="tab">Motion</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="settings_vehicles" role="tab">Vehicles</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="settings_faces" role="tab">Faces</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="settings_alerts" role="tab">Alerts</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="settings_users" role="tab">Users</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="settings_reset" role="tab">Reset</a>
+</div>
+</span>
+
+
+<script>
+  $(function () {
+    $('#myList a:last-child').tab('show')
+  })
+</script>
+
+ <form action="/cam_add_method" method="POST">
+    <form id="Login">
+        <div class="container"> 
+
+        
+
+
+    </div>
+
+    </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="cam_name" id="inputText" placeholder="Choose a camera name">
+        </div>
+
+		<div class="form-group">
+            <input type="text" class="form-control" name="cam_feed" id="inputText" placeholder="Enter the camera feed link (e.g rtsp://a:b@v.com)">
+        </div>
+        
+		<input type="checkbox" name="cam_has_audio">
+		Enable audio recording/muxing (requires RTSP audio)
+		<br></br>
+        <!--<div class="forgot">
+        <a href="reset.html">Forgot password?</a> 
+</div>!-->
+        <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i>  Add camera</button>
+		<a class="btn btn-info" href="/settings_cameras" role="button">Cancel</a>
+    </form>
+  
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2017</p>
+      </footer>
+    </div> <!-- /container -->
+
+    </div> <!-- /container -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../static/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+ 
+  </body>
+</html>
