@@ -1,11 +1,9 @@
 language: python
-before_install:
-  - sudo pip install opencv-python
-  - sudo pip install psutil
-  - sudo pip install flask_autoindex
-  - sudo pip install flask
-  - sudo pip install requests
-  - sudo pip install imutils
-  - sudo pip install cryptography
-  - sudo pip install passlib
-  - sudo pip install PyMySQL
+python:
+  - "3.6"
+cache: pip
+install:
+  - sudo apt-get install portaudio19-dev
+  - pip install -r requirements.txt
+script:
+  - python main.py
