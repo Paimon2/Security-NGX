@@ -1,0 +1,11 @@
+opencv-python
+psutil
+flask_autoindex
+flask
+requests
+imutils
+cryptography
+passlib
+PyMySQL
+imutils
+pyaudio
