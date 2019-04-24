@@ -1,5 +1,5 @@
 # **SECURITY NGX SOFTWARE LICENSE AGREEMENT**
-### (C) UltraFuture7000 and other contributors
+## (C) UltraFuture7000 and other contributors
 ### https://github.com/UltraFuture7000/Security-NGX
 ### Amended 24th April 2018
 
