@@ -1,0 +1,48 @@
+{
+      "database": {
+            "host": "127.0.0.1",
+            "name": "mysql",
+            "user": "root",
+            "password": "pass123",
+            "port": 3306
+      },
+      "ddns": {
+            "enabled": true,
+            "password": "password123",
+            "ping_interval": 1200,
+            "username": "dynuddnsusername"
+      },
+      "flask": {
+            "port": 80,
+            "secret_key": "bUHdWEp/48df36v]"
+      },
+      "loop_recording": {
+            "delete_after_days": 7
+      },
+      "ffmpeg": {
+            "compress_and_convert": false
+      },
+      "notifications": {
+            "email_server": "smtp.gmail.com",
+            "email_server_port": 587,
+            "acct_address": "test123@gmail.com",
+            "acct_password": "password",
+            "from_email": "test123@gmail.com",
+            "to_email": "test123@gmail.com"
+      },
+      "motion_detection": {
+            "min_area_px": 1000,
+            "max_area_sq_px": 83000,
+            "exclusion_zones": [
+              { "Small fence region":  [350, 0, 10] },
+              { "Other fence region":  [410, 0, 8] },
+              { "3rd fence region":  [426, 123, 4] },
+              { "Small patch":  [140, 170, 8] },
+              { "Patch 2":  [248, 180, 4] },
+              { "Small bush":  [473, 62, 8] },
+              { "Unusual noisy error":  [50, 0, 9] }
+             ],
+            "masking_division_enabled": true,
+            "masking_divisor": 4
+      }
+}
